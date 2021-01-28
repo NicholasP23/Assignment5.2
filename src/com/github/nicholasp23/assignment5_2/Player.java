@@ -1,10 +1,12 @@
+package com.github.nicholasp23.assignment5_2;
 public class Player {
 
     private final String name;
     private final int level;
 
     public Player(String name, int level) {
-
+        this.name = name;
+        this.level = level;
     }
 
     /*
@@ -13,7 +15,15 @@ public class Player {
      Returns 1 if this player is better than the formal parameters other player
      */
     public int compareTo(Player otherPlayer) {
-
+        if( this.level < otherPlayer.level){
+            return -1;
+        }
+        else if(this.level == otherPlayer.level){
+            return 0;
+        }
+        else{
+            return 1;
+        }
     }
 
     public int getLevel() {
